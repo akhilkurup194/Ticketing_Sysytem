@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Project1.Models.NewTicket>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Zoho</title>
+    <link href="~/Content/StyleSheet1.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <title>GetProductDetail</title>
+</head>
+<body class="getproduct">
+    <div class="fontnav">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <img class="logo" src="~/images/Zoho.png" />
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" title="more options">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("Zoho Customer Portal", "CustomerPage", "Customer", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Add New Ticket", "AddTicket", "Customer")</li>
+                        <li>@Html.ActionLink("Track Your Tickets", "GetAllTickets", "Customer")</li>
+                        <li>@Html.ActionLink("profile", "profileView", "Customer")</li>
+                        <li>@Html.ActionLink("Logout", "Index", "Home")</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    </br>
+    </br>
+    </br>
+
+    <p>No Tickets Avilable..!!</p>
+</body>
+<script type="text/javascript">
+    function preventBack() { window.history.forward(); }
+    setTimeout("preventBack()", 0);
+    window.onunload = function () { null };
+</script>
+</html>
+

@@ -1,0 +1,64 @@
+﻿@{
+    ViewBag.Title = "Admin Portal";
+}
+@model Project1.Models.Loginclass
+
+@{
+    ViewBag.Title = "Login Here";
+}
+
+<h1 class="loginhead">Admin Sign in</h1>
+<h4>Create and manage agents</h4>
+<script src="~/Scripts/Validation.js"></script>
+<link href="~/Content/StyleSheet1.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css" rel="stylesheet" />
+<body class="loginbodyadmin">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="Logininputs">
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div>
+
+                @Html.LabelFor(model => model.Username, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div>
+
+                    @Html.EditorFor(model => model.Username, new { htmlAttributes = new { @class = "form-control", placeholder = "Username", @id = "name", @onfocusout = "checkname()" } })
+                    @*@Html.ValidationMessageFor(model => model.Username, "", new { @class = "text-danger" })*@
+                    <small> </small>
+                </div>
+            </div>
+
+            <div>
+
+                @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div>
+
+                    <input type="password" @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control", placeholder = "Password", @id = "pwd", @onfocusout = "checkpwd()" } })
+                           @*<input type="checkbox" onclick="myFunction()">Remember me*@ @*@Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })*@
+                    <small> </small>
+                </div>
+                <input type="checkbox" onclick="myFunction()">Show Password<br /><br />
+            </div>
+            <br />
+            <div class="form-group">
+                <h4 class="Messag">@Html.ViewData["Message"]</h4>
+                <input type="submit" value="Login" class="btnlogin" />
+            </div>
+        </div>
+    }
+</body>
+<script src="vendor/jquery/jquery.min.js"></script>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+@*<h2>@ViewBag.Title.</h2>
+    <h3>@ViewBag.Message</h3>
+    <body class="aboutbody">
+        <p>ClaySys was founded to deliver technology solutions that positively impacted the business, versus just technology solutions that were technically excellent, but may not have delivered on the key business objectives. We achieve this through a structured methodology that maps the business impact on every aspect of the technology solution being designed and developed. The core team at ClaySys are tenured IT Consultants who were involved in large scale technology projects starting from the early nineties. The innovative key-employee retention policies and incentives that we have structured ensure that our key employees stay with ClaySys for the long term, thus delivering incremental value to our clients, as we understand their business better. Our investments into product development to address some of the major holistic pain points related to software development and maintenance, keep us on the cutting edge of technology and well positioned to deliver exponential value to our clients. .</p>
+        <h3>Technology</h3>
+        <p>ClaySys diversified into the construction business when we saw an opportunity with how technology was actively entering homes. Today ClaySys Lifestyle constructs apartments and villas in the city of Kochi in Kerala that is of a standard that is not typically found in India. ClaySys is primarily a technology company, and we have been at the forefront of Information Technology and Electronics for more than a decade. Our strengths are building cutting edge software and software products.</p>
+    </body>*@
