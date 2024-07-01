@@ -13,7 +13,7 @@
 }.loginbodyadmin {
     background-color: aqua;
     background-image: url('../images/back1.jpg');
-    background-size: cover;
+    background-size: cover;singupbody
     background-repeat: no-repeat;
 }.loginbodycustomer {
     background-color: aqua;
@@ -56,6 +56,13 @@
 .singupbody {
     background-color: aqua;
     background-image: url('../images/userproduct.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.ticketbody {
+    background-color: aqua;
+    background-image: url('../images/about2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }
