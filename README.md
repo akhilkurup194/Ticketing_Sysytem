@@ -90,6 +90,8 @@ Database
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 I made three tables in the database: one with the admin credentials, another with the agent details, a third with the customer details, and a fourth with the ticket details. I use every CURD operation in stored procedures in this project.
 
+I've attached the backup of sql database in git
+
 Admin Table
 
 ![adminCreds](https://github.com/akhilkurup194/Ticketing_Sysytem/assets/174370832/ee3d66bc-60e7-4999-aca9-93c0da171e31)
