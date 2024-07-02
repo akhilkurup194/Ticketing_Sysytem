@@ -4,7 +4,7 @@
     ViewBag.Title = "Edit";
 }
 
-<h2>Edit</h2>
+<h2>Status of this ticket</h2>
 
 <div class="fontnav">
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -34,7 +34,6 @@
         @Html.AntiForgeryToken()
 
 <div class="form-horizontal">
-    <h4>CustAgentModel</h4>
     <hr />
     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
     @Html.HiddenFor(model => model.TicketId)
@@ -100,7 +99,7 @@
     }
 
     <div>
-        @Html.ActionLink("Back to List", "GetAllCustomers")
+        @Html.ActionLink("Back to List", "GetAllTickets")
     </div>
 
     @section Scripts {
